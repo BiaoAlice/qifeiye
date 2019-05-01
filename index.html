@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jq.js"></script>
     <script src="./js/swiper.js"></script>
 </head>
 <body>
@@ -58,9 +59,7 @@
                     <div class="logo-main">
                         <div class="logo-right">
                             <div class="logo-right-top">
-                                <p>做一个相应式网站
-                                    <br>
-                                    让世界更好的了解您</p>
+                                <p></p>
                             </div>
                             <div class="logo-right-mid">
                                 <p>真「响应式」自助建站平台</p>
@@ -75,7 +74,7 @@
             </div>
             <div class="container">
                 <div class="container-title">
-                    <div class="container-main">
+                    <div class="container-main animate1">
                         <h2>更快，更简单</h2>
                         <p>让您事半功N倍的建站工具</p>
                         <p>一次编辑，所用设备下使用</p>
@@ -92,10 +91,10 @@
             <div class="qfy">
                 <div class="qfy-container">
                     <div class="qfy-container-left">
-                        <img src="./img/index/indexQfy.png" alt="">
+                        <img class="animate2" src="./img/index/indexQfy.png" alt="">
                     </div>
                     <div class="qfy-container-right">
-                        <div class="qfy-container-right-msg">
+                        <div class="qfy-container-right-msg animate3" >
                             <h2>基于H5模板，快速搭建一个响应式网站</h2>
                             <p>起飞页™是一款简单、便捷的工具，可以帮助您制作响应式网站。我们的网站构建器，将传统的编码工作转化为直观的拖拽操作和文字录入。在这里，您仅需花上10分钟便可以完成一个H5响应式网站，您会发现完全不需要编写一行代码，这就是起飞页自助建站的神奇之处。</p>
                         </div>
@@ -417,20 +416,7 @@
         </footer>
     </div>
 
-    <script>
-        var mySwiper = new Swiper( '.swiper-container', {
-            navigation:{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false
-            },
-            loop:true,
-            slidesPerView: 3,
-            spaceBetween: 30
-        } )
-    </script>
+    <script src="./js/index.js"></script>
+
 </body>
 </html>
