@@ -25,8 +25,7 @@ let timer = setInterval(function(){
 
 
 
-
-let move = function(ele ,option ,time,flag){
+ function move (ele ,option ,time,flag){
     let top = ele.offset().top;
     let sum = $(window).height() + $(window).scrollTop();
     if(top +30 < sum && flag){
@@ -41,11 +40,78 @@ $(window).on("scroll",function(){
 
 let flag2 = true;
 $(window).on("scroll",function(){
-    move($('.animate2') , {left:0,opacity:1},1500,flag2)
+    move($('.animate2') , {left:0,opacity:1},1500,flag2);
+    move($('.animate3') , {top:0,opacity:1},1500,flag2);
 })
 
 let flag3 = true;
 $(window).on("scroll",function(){
-    move($('.animate3') , {top:0,opacity:1},1500,flag3)
+    move($('.animate4') , {top:0,opacity:1},1500,flag3);
+    move($('.animate5') , {right:0,opacity:1},1500,flag3);
 })
 
+let flag4 = true;
+$(window).on("scroll",function(){
+    move($('.animate6') , {left:0,opacity:1},1500,flag4);
+    move($('.animate7') , {top:0,opacity:1},1500,flag4);
+})
+
+let flag5 = true;
+$(window).on("scroll",function(){
+    move($('.animate8') , {top:0,opacity:1},1500,flag5);
+    move($('.animate9') , {right:0,opacity:1},1500,flag5);
+})
+
+let flag6 = true;
+$(window).on("scroll",function(){
+    move($('.animate10') , {opacity:1},1500,flag6);
+})
+
+
+$(".ul-one li").on("mouseenter",function(){
+    $(this).css({
+        border:'1px solid #58a8f3',
+        background:"white"
+    })
+    $(this).find("img").attr("src" , `./img/index/indexIcon${$(this).index()+1}-1.png`)
+})
+
+
+$(".ul-two li").on("mouseenter",function(){
+    $(this).css({
+        border:'1px solid #58a8f3',
+        background:"white"
+    })
+    $(this).find("img").attr("src" , `./img/index/indexIcon${$(this).index()+4}-1.png`)
+})
+
+$(".qfy-icon li").on("mouseleave",function(){
+    $(this).css({
+        border:'1px solid #ccc',
+        background:'transparent'
+    })
+})
+
+$(".ul-one li").on("mouseleave",function(){
+    $(this).find("img").attr("src" , `./img/index/indexIcon${$(this).index()+1}.png`)
+})
+
+
+$(".ul-two li").on("mouseleave",function(){
+    $(this).find("img").attr("src" , `./img/index/indexIcon${$(this).index()+4}.png`)
+})
+
+$(window).on("scroll",function(){
+    if($(this).scrollTop() > 200){
+        $(".hidden").css({
+            opacity:1,
+            transform:'translateY(0)'
+        })
+    }
+    else{
+        $(".hidden").css({
+            opacity:0,
+            transform:'translateY(-70px)'
+        })
+    }
+})
